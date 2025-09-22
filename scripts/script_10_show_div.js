@@ -13,8 +13,11 @@ export function show_div(divId) {
         'sporthal'
     ];
     divs.forEach(id => {
-        $(`#${id}`)?.style.display = 'none';
+        const el = $(`#${id}`);
+        if (el) el.style.display = 'none';
     });
     // Toon geselecteerde div
-    $(`#${divId}`)?.style.display = 'block';
+    const selectedDiv = $(`#${divId}`);
+    if (selectedDiv) selectedDiv.style.display = 'block';
 }
+
