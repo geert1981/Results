@@ -1,5 +1,5 @@
 // Toggle zichtbaarheid van het team grid (utility-based)
-import { $ } from './utils.js';
+import { $ } from 'https://geert1981.github.io/Results/scripts/utils.js';
 
 let teller_teams = 0;
 let grid_teams_visible = false; // Status bewaren
@@ -19,4 +19,5 @@ export function toggle_teams() {
     }
     grid_teams_visible = !grid_teams_visible;
 }
+
 // END FUNCTIE TOGGLE_TEAMS
