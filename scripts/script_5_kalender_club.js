@@ -1,4 +1,4 @@
-import { fetchJson, fillTable, normalizeWords, $, setText } from './utils.js';
+import { fetchJson, fillTable, normalizeWords, $, setText } from 'https://geert1981.github.io/Results/scripts/utils.js';
 // KALENDER CLUB
 
 function update_kalender_club() {
@@ -186,3 +186,4 @@ function update_kalender_club() {
 
 
 update_kalender_club();
+
