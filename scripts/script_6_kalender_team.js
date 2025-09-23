@@ -1,4 +1,4 @@
-import { fetchJson, fillTable, normalizeWords, $, setText } from './utils.js';
+import { fetchJson, fillTable, normalizeWords, $, setText } from 'https://geert1981.github.io/Results/scripts/utils.js';
 // KALENDER TEAM
 let bvbl_old_2;
 let club_teamId_default;
@@ -113,4 +113,5 @@ async function update_kalender_team() {
     // ...existing code...
 
     // einde functie
+
 }
