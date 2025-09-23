@@ -9,7 +9,7 @@ import { scroll_team_buttons } from 'https://geert1981.github.io/Results/scripts
 import { toggle_teams } from 'https://geert1981.github.io/Results/scripts/script_12_toggle_teams.js';
 import { change_club } from 'https://geert1981.github.io/Results/scripts/script_1_info_clubs.js';
 import { show_previous_week, show_current_week, show_next_week } from 'https://geert1981.github.io/Results/scripts/script_8_kalender_reeks.js';
-import { filter_table_leden } from 'https://geert1981.github.io/Results/scripts/script_4_leden.js';
+import { update_leden } from 'https://geert1981.github.io/Results/scripts/script_4_leden.js';
 
 // Koppel functies aan window voor gebruik in onclick etc.
 window.show_div = show_div;
@@ -30,9 +30,10 @@ window.change_club = change_club;
 window.show_previous_week = show_previous_week;
 window.show_current_week = show_current_week;
 window.show_next_week = show_next_week;
-window.filter_table_leden = filter_table_leden;
+window.update_leden = update_leden;
 
 // Voeg hier eventueel extra initialisatie toe
 // ...
+
 
 
