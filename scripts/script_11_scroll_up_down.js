@@ -1,5 +1,5 @@
 // Scroll de team buttons container omhoog of omlaag (utility-based)
-import { $ } from './utils.js';
+import { $ } from 'https://geert1981.github.io/Results/scripts/utils.js';
 
 export function scroll_team_buttons(direction) {
     const button_container = $('.team_buttons_container');
@@ -10,4 +10,5 @@ export function scroll_team_buttons(direction) {
         top: direction * button_height,
         behavior: 'smooth'
     });
+
 }
