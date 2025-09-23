@@ -1,4 +1,4 @@
-import { fetchJson, fillTable, normalizeWords, $, setText } from './utils.js';
+import { fetchJson, fillTable, normalizeWords, $, setText } from 'https://geert1981.github.io/Results/scripts/utils.js';
 // LEDEN CLUB
 async function update_leden() {
     const club_naam = localStorage.getItem('storage_page');
@@ -33,4 +33,5 @@ async function update_leden() {
         console.log('error', error);
     }
 }
+
 update_leden();
