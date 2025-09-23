@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles/grids.css">
+        <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/banner.css">
+        <link rel="stylesheet" href="styles/font_style.css">
+        <link rel="stylesheet" href="styles/socials.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- https://fontawesome.com/ -->
+
+
+        <title>Results</title>
+    </head>
+    <body>
+        <div class="grid_banner">
+            <div class="container_banner" id="result_kalender_banner">
+                <div class="buttons_prev_next_banner" id="change_week_buttons">
+                    <div class="div_previous_button"><button class="previous_button" id="previous_button" onclick="show_previous_week()">&#9668;</button></div>
+                    <div class="div_refresh_button"><button class="refresh_button" id="refresh_button" onclick="show_current_week()">&#10227;</button></div>
+                    <div class="div_next_button"><button class="next_button" id="next_button" onclick="show_next_week()">&#9658;</button></div>
+                </div>
+
+                <div class="button_left_banner">
+                    <button class="scroll_left_banner">&#9668;</button>
+                </div>
+
+                <div id="scoreboard_banner">
+                    <div class="lint_banner"></div>
+                </div>
+
+                <div class="button_right_banner">
+                    <button class="scroll_right_banner">&#9658;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid_clubs_buttons">
+            <button class="club_link" onclick="change_club('BVBL1156')">Lommel</button>
+            <button class="club_link" onclick="change_club('BVBL1106')">Leopoldsburg</button>
+            <button class="club_link" onclick="change_club('BVBL1465')">Limburg United</button>
+            <button class="club_link" onclick="change_club('BVBL1076')">Beringen</button>
+            <button class="club_link" onclick="change_club('BVBL1267')">Stevoort</button>
+            <button class="club_link" onclick="change_club('BVBL1294')">Tongeren</button>
+            <button class="club_link" onclick="change_club('BVBL1081')">Zolder</button>
+            <button class="club_link" onclick="change_club('BVBL1130')">Zonhoven</button>
+            <button class="club_link" onclick="change_club('BVBL1104')">Optima</button>
+            <button class="club_link" onclick="change_club('BVBL1027')">KSTBB</button>
+            <button class="club_link" onclick="change_club('BVBL1146')">Peer</button>
+            <button class="club_link" onclick="change_club('BVBL1419')">Houthalen</button>
+            <button class="club_link" onclick="change_club('BVBL1176')">Lummen</button>
+            <button class="club_link" onclick="change_club('BVBL1217')">Hades</button>
+            <button class="club_link" onclick="change_club('BVBL1087')">Hasselt</button>
+            <button class="club_link" onclick="change_club('BVBL1455')">Bree</button>
+            <button class="club_link" onclick="change_club('BVBL1255')">Aarschot</button>
+            <button class="club_link" onclick="change_club('BVBL1195')">Guco</button>
+            <button class="club_link" onclick="change_club('BVBL1189')">Oxaco</button>
+            <button class="club_link" onclick="change_club('BVBL1458')">Elite</button>
+            <button class="club_link" onclick="change_club('BVBL1126')">Mol</button>
+            <button class="club_link" onclick="change_club('BVBL1022')">Oostende</button>
+            <button class="club_link" onclick="change_club('BVBL1051')">Finexa</button>
+            <button class="club_link" onclick="change_club('BVBL1004')">Antwerp Giants</button>
+        </div>
+        <div class="grid_container">
+            <div class="grid_club_details" id="result_club_details">
+                <div class="regel_logo_naam">
+                    <div class="team_logo" id="team_logo"></div>
+                    <div class="clubnaam" id="clubnaam"></div>
+                </div>
+                <div id="stamnummer_site"></div>
+                <div id="adres"></div>
+                <div id="secretaris"></div>
+            </div>
+
+            <div class="grid_team_buttons_menu">
+                <button onclick="toggle_teams()">Teams</button>
+            </div>
+            
+            <div class="grid_team_buttons" id="team_buttons">
+                <div class="team_button_top" onclick="scroll_team_buttons(-5)">
+                    <button class="button_scroll_top">&#9650;</button>
+                </div>
+                <div class="team_buttons_container" id="team_buttons_content"></div>
+                <div class="team_button_bottom" onclick="scroll_team_buttons(5)">
+                    <button class="button_scroll_bottom">&#9660;</button>
+                </div>
+            </div>
+
+            
+
+            <div class="grid_all_divs">
+                
+                <div class="grid_menu_buttons">
+                    <button class="knop_klassement" onclick="show_div('klassement')"><t2>Klassement</t2></button>
+                    <button class="knop_kalender" onclick="show_div('kalender_team')"><t2>Kalender</t2></button>
+                    <button class="knop_reeks" onclick="show_div('kalender_reeks')"><t2>Reeks: deze week</t2></button>
+                    <button class="knop_club" onclick="show_div('kalender_club')"><t2>Club: deze week</t2></button>
+                    <button class="knop_leden" onclick="show_div('leden')"><t2>Leden</t2></button>
+                    <button class="knop_bestuur" onclick="show_div('bestuur')"><t2>Bestuur</t2></button>
+                    <button class="knop_sporthal" onclick="show_div('sporthal')"><t2>Sporthal</t2></button>
+                </div>
+
+                <div class="grid_kalender_reeks" id="kalender_reeks" style="display:none;">
+                    <div class="kalender_header">
+                        <h3 id="title_kalender_reeks"></h3>
+                        <button onclick="stats_reeks()"><img src="pics/stats.png"></button>
+                    </div>
+                    <div class="buttons_date_range">
+                        <div class="buttons_prev_next" id="change_week_buttons">
+                            <button class="previous_button" id="previous_button" onclick="show_previous_week()">&#9668;</button>
+                            <button class="refresh_button" id="refresh_button" onclick="show_current_week()">&#10227;</button>
+                            <button class="next_button" id="next_button" onclick="show_next_week()">&#9658;</button>
+                        </div>
+                        <div id="date_range_kalender_reeks"></div>
+                    </div>
+                    
+                    <div class="table_container">
+                        <div class="title_reeks"></div>
+                        <table>
+                            <thead><tr><th>Datum</th><th>Tijd</th><th>Home Team</th><th>Uitslag</th><th>Away team</th><th id="hide_small">Accomodatie</th><th id="hide_small">Reeks</th></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="grid_kalender_team" id="kalender_team" style="display:none;">
+                    <div class="kalender_header">
+                        <h3 id="title_kalender_team"></h3>
+                        <button onclick="ical()"><img src="pics/agenda.png" alt="Download iCal"></button>
+                        <button onclick="stats_team()"><img src="pics/stats.png"></button>
+                    </div>
+                    <table>
+                        <thead><tr><th>Datum</th><th>Tijd</th><th>Home Team</th><th>Uitslag</th><th>Away team</th><th id="hide_small">Accomodatie</th><th id="hide_small">Reeks</th></tr></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="grid_kalender_club" id="kalender_club" style="display:none;">
+                    <div class="kalender_header">
+                        <h3 id="title_kalender_club"></h3>
+                        <button onclick="stats_club()"><img src="pics/stats.png"></button>
+                    </div>
+                    <div class="buttons_prev_next" id="change_week_buttons">
+                        <button class="previous_button" id="previous_button" onclick="show_previous_week()">&#9668;</button>
+                        <button class="refresh_button" id="refresh_button" onclick="show_current_week()">&#10227;</button>
+                        <button class="next_button" id="next_button" onclick="show_next_week()">&#9658;</button>  
+                    </div>
+                    <div id="date_range_kalender_club"></div>
+
+                    <div class="table_container">
+                        <table>
+                            <thead><tr><th>Datum</th><th>Tijd</th><th>Home Team</th><th>Uitslag</th><th>Away team</th><th id="hide_small">Accomodatie</th><th id="hide_small">Reeks</th></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                
+                <div class="grid_reeks" id="klassement"style="display:block;">
+                    <div class="klassement_header">
+                        <h3 id="title_klassement"></h3>
+                        <button onclick="ical()"><img src="pics/agenda.png" alt="Download iCal"></button>
+                        <button onclick="stats_team()"><img src="pics/stats.png"></button>
+                    </div>
+                    <div class="title_reeks"></div>
+                    <table>
+                        <thead><tr><th>#</th><th>Team</th><th>M</th><th>W</th><th>L</th><th>G</th><th>Ptn</th></tr></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                
+                <div class="grid_leden" id="leden" style="display:none;">
+                    <h3 id="title_leden">Leden</h3>
+                    <input type="text" id="filter_input" placeholder="Filteren op ..." oninput="filter_table_leden()">
+                    <div class="table_leden_container">
+                        <table id="table_leden">
+                            <thead><tr><th>Lidnr</th><th>Naam</th><th>Voornaam</th><th>Cat</th><th>Geb datum</th></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid_bestuur" id="bestuur" style="display:none;"> <!-- DISPLAY NONE OR BLOCK -->
+                    <div class="bestuur_content"> <!-- DISPLAY FLEX -->
+                        <div class="voorzitter_bestuur">
+                            <div id="voorzitter_title"></div>
+                            <div id="voorzitter_naam"></div>
+                            <div id="voorzitter_tel"></div>
+                            <div id="voorzitter_gsm"></div>
+                            <div id="voorzitter_email"></div>
+                        </div>
+                        <div class="secretaris_bestuur">
+                            <div id="secretaris_title"></div>
+                            <div id="secretaris_naam"></div>
+                            <div id="secretaris_tel"></div>
+                            <div id="secretaris_gsm"></div>
+                            <div id="secretaris_email"></div>
+                        </div>
+                        <div class="penningmeester_bestuur">
+                            <div id="penningmeester_title"></div>
+                            <div id="penningmeester_naam"></div>
+                            <div id="penningmeester_tel"></div>
+                            <div id="penningmeester_gsm"></div>
+                            <div id="penningmeester_email"></div>
+                        </div>
+                        <div class="ondervoorzitter_bestuur">
+                            <div id="ondervoorzitter_title"></div>
+                            <div id="ondervoorzitter_naam"></div>
+                            <div id="ondervoorzitter_tel"></div>
+                            <div id="ondervoorzitter_gsm"></div>
+                            <div id="ondervoorzitter_email"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid_sporthal" id="sporthal" style="display:none;"> <!-- DISPLAY NONE OR BLOCK -->
+                    <div class="sporthal_content"> <!-- DISPLAY FLEX -->
+                        <div class="sporthal_club">
+                            <div id="sporthallen_buttons"></div>
+                            <div id="sporthal_naam"></div>
+                            <iframe class="google_maps" id="google_maps_frame" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid_footer">
+                    <div class="socials">
+                        Follow us:
+                        <!-- https://fontawesome.com -->
+                        <button class="youtube" onclick="youtube()"><i class="fa-brands fa-youtube"></i></button> <!-- https://www.youtube.com/@basketbalvlaanderen -->
+                        <button class="instagram" onclick="instagram()"><i class="fa-brands fa-instagram"></i></button> <!-- https://www.instagram.com/basketbalvlaanderen/ -->
+                        <button class="linkedin" onclick="linkedin()"><i class="fa-brands fa-linkedin"></i></button> <!-- https://be.linkedin.com/company/basketbal-vlaanderen -->
+                        <button class="facebook" onclick="facebook()"><i class="fa-brands fa-facebook"></i></button> <!-- https://www.facebook.com/basketbalvlaanderenvzw/ -->
+                        <button class="x_twitter" onclick="x_twitter()"><i class="fa-brands fa-x-twitter"></i></button> <!-- https://twitter.com/BasketbalVlaand/status/439483647046205440 -->
+                        <button class="tiktok" onclick="tiktok()"><i class="fa-brands fa-tiktok"></i></button>
+                        <!-- VLAAMSE BASKETBAL COACHES https://www.facebook.com/groups/vlaamsebasketbalcoaches/ -->
+                    </div>
+                    <div class="copyright"> <p id="Current_year_text"></p></div>
+                </div>
+            </div>
+            <div class="socialbar">
+                <span class="socialbar_links">
+                    <!-- https://icons8.com/ -->
+                    <li><button class="youtube" onclick="youtube()"><img src="pics/youtube.png"></button></li>
+                    <li><button class="instagram" onclick="instagram()"><img src="pics/instagram.png"></button></li>
+                    <li><button class="linkedin" onclick="linkedin()"><img src="pics/linkedin.png"></button></li>
+                    <li><button class="facebook" onclick="facebook()"><img src="pics/facebook.png"></button></li>
+                    <li><button class="x_twitter" onclick="x_twitter()"><img src="pics/x_twitter.png"></button></li>
+                    <li><button class="tiktok" onclick="tiktok()"><img src="pics/tiktok.png"></button></li>
+                    <li><button class="stats" onclick="stats()"><img src="pics/basketball_stats.png"></button></li>
+                        
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        
+    </body>
+    <footer>
+    <script type="module" src="scripts/main.js"></script>
+        <!-- <i class="fa-brands fa-facebook"></i> -->
+        <!-- <i class="fa-brands fa-x-twitter"></i> -->
+        <!-- <i class="fa-brands fa-youtube"></i> -->
+        <!-- <i class="fa-brands fa-instagram"></i> -->
+        <!-- <i class="fa-brands fa-linkedin"></i> -->
+        <!-- <i class="fa-solid fa-envelope"></i> -->
+        <!-- <i class="fa-solid fa-calendar"></i> -->
+        <!-- <i class="fa-solid fa-phone"></i> -->
+        <!-- <i class="fa-solid fa-mobile"></i>  -->
+        </footer>
+
+
+</html>
