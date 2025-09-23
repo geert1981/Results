@@ -1,4 +1,4 @@
-import { fetchJson, fillTable, normalizeWords, $, setText } from './utils.js';
+import { fetchJson, fillTable, normalizeWords, $, setText } from 'https://geert1981.github.io/Results/scripts/utils.js';
 // COPYRIGHT YEAR
 const current_year = new Date().getFullYear();
 setText($("#Current_year_text"), $("#Current_year_text").innerHTML + `<h8>&copy; ${current_year} Designed by Geert Kril - All rights reserved</h8>`);
@@ -478,4 +478,5 @@ function init() {
 
     // ... (rest van je code)
     club_details_container.style.cssText = page_style;
+
 }
