@@ -1,4 +1,4 @@
-import { fetchJson, fillTable, normalizeWords, $, setText } from './utils.js';
+import { fetchJson, fillTable, normalizeWords, $, setText } from 'https://geert1981.github.io/Results/scripts/utils.js';
 // SORT & FILTERS
 
 let result_kalender_club = [];
@@ -207,4 +207,5 @@ function filter_table_leden() {
 // Roep get_current_week aan wanneer de pagina is geladen
 window.onload = function() {
     get_current_week();
+
 };
