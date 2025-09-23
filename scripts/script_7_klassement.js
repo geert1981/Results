@@ -1,4 +1,4 @@
-import { fetchJson, fillTable, normalizeWords, $, setText } from './utils.js';
+import { fetchJson, fillTable, normalizeWords, $, setText } from 'https://geert1981.github.io/Results/scripts/utils.js';
 // KLASSEMENT
 let teamRks;
 let teamRksNm;
@@ -92,3 +92,4 @@ async function update_klassement() {
         console.log('error', error);
     }
 }
+
