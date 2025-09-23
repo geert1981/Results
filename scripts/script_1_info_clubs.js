@@ -14,7 +14,7 @@ if (bvbl_code != null){
     bvbl_code = "BVBL1156";
 }
 // DEZE FUNCTIONS UITVOEREN BIJ KLIK OP CHANGE CLUB BUTTON
-async function change_club(bvbl_code) {
+export async function change_club(bvbl_code) {
     // console.log('Change club functie afgevuurd ...')
     bvbl = bvbl_code;
     localStorage.setItem('storage_bvbl', bvbl);
@@ -480,3 +480,4 @@ function init() {
     club_details_container.style.cssText = page_style;
 
 }
+
