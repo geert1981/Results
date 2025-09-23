@@ -1,4 +1,4 @@
-import { fetchJson, fillTable, normalizeWords, $, setText } from './utils.js';
+import { fetchJson, fillTable, normalizeWords, $, setText } from 'https://geert1981.github.io/Results/scripts/utils.js';
 // CLUB DETAILS
 let team_naam;
 let team_id;
@@ -381,4 +381,5 @@ async function change_team(team_naam, team_id, team_reeks_id, team_reeks_naam, c
     // console.log('Call update klassement');
 }
 document.addEventListener('DOMContentLoaded', update_club_details);
+
 document.addEventListener('DOMContentLoaded', change_team(team_naam, team_id, team_reeks_id, team_reeks_naam, club_naam, reeks_naam_filtered));
