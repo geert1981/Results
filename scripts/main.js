@@ -1,15 +1,15 @@
 // main.js - centrale entrypoint voor de app
 // Importeer alle globale functies en hang ze aan window zodat ze vanuit HTML bereikbaar zijn
 
-import { show_div } from 'https://geert1981.github.io/Results//script_10_show_div.js';
-import { ical } from 'https://geert1981.github.io/Results//script_13_iCal.js';
-import { stats_team, stats_club, stats_reeks, stats } from 'https://geert1981.github.io/Results//script_14_links.js';
-import { youtube, instagram, linkedin, facebook, x_twitter, tiktok } from 'https://geert1981.github.io/Results//script_14_links.js';
-import { scroll_team_buttons } from 'https://geert1981.github.io/Results//script_11_scroll_up_down.js';
-import { toggle_teams } from 'https://geert1981.github.io/Results//script_12_toggle_teams.js';
-import { change_club } from 'https://geert1981.github.io/Results//script_1_info_clubs.js';
-import { show_previous_week, show_current_week, show_next_week } from 'https://geert1981.github.io/Results//script_8_kalender_reeks.js';
-import { filter_table_leden } from 'https://geert1981.github.io/Results//script_4_leden.js';
+import { show_div } from 'https://geert1981.github.io/Results/scripts/script_10_show_div.js';
+import { ical } from 'https://geert1981.github.io/Results/scripts/script_13_iCal.js';
+import { stats_team, stats_club, stats_reeks, stats } from 'https://geert1981.github.io/Results/scripts/script_14_links.js';
+import { youtube, instagram, linkedin, facebook, x_twitter, tiktok } from 'https://geert1981.github.io/Results/scripts/script_14_links.js';
+import { scroll_team_buttons } from 'https://geert1981.github.io/Results/scripts/script_11_scroll_up_down.js';
+import { toggle_teams } from 'https://geert1981.github.io/Results/scripts/script_12_toggle_teams.js';
+import { change_club } from 'https://geert1981.github.io/Results/scripts/script_1_info_clubs.js';
+import { show_previous_week, show_current_week, show_next_week } from 'https://geert1981.github.io/Results/scripts/script_8_kalender_reeks.js';
+import { filter_table_leden } from 'https://geert1981.github.io/Results/scripts/script_4_leden.js';
 
 // Koppel functies aan window voor gebruik in onclick etc.
 window.show_div = show_div;
@@ -34,4 +34,5 @@ window.filter_table_leden = filter_table_leden;
 
 // Voeg hier eventueel extra initialisatie toe
 // ...
+
 
