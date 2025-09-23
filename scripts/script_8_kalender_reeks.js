@@ -1,4 +1,4 @@
-import { fetchJson, fillTable, normalizeWords, $, setText } from './utils.js';
+import { fetchJson, fillTable, normalizeWords, $, setText } from 'https://geert1981.github.io/Results/scripts/utils.js';
 // KALENDER REEKS
 
 async function update_kalender_reeks_id() {
@@ -103,4 +103,5 @@ async function update_kalender_reeks_id() {
         document.querySelector(".grid_kalender_reeks #title_kalender_reeks").innerHTML = kalender_reeks_reeks_name;
     }
  
+
 // document.addEventListener('DOMContentLoaded', update_kalender_reeks_id());
