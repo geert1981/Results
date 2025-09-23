@@ -178,7 +178,7 @@ function filter_uniek_op_eigenschap(array, eigenshap) {
 // END FILTER OP DUBBELE WAARDE IN ARRAY
 
 // FILTER LEDEN
-function filter_table_leden() {
+export function filter_table_leden() {
     // Gebruik let/const en $ voor DOM-selectie
     const input = $("#filter_input");
     const filter = input.value.toUpperCase();
@@ -209,3 +209,4 @@ window.onload = function() {
     get_current_week();
 
 };
+
