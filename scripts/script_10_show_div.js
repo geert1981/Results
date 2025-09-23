@@ -1,5 +1,5 @@
 // Toon één div en verberg de rest (utility-based)
-import { $ } from './utils.js';
+import { $ } from 'https://geert1981.github.io/Results/scripts/utils.js';
 
 export function show_div(divId) {
     // Verberg alle relevante divs
@@ -20,3 +20,4 @@ export function show_div(divId) {
     const selectedDiv = $(`#${divId}`);
     if (selectedDiv) selectedDiv.style.display = 'block';
 }
+
