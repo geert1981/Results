@@ -1,6 +1,6 @@
 import { fetchJson, fillTable, normalizeWords, $, setText } from 'https://geert1981.github.io/Results/scripts/utils.js';
 // LEDEN CLUB
-async function update_leden() {
+export async function update_leden() {
     const club_naam = localStorage.getItem('storage_page');
     const link_leden = 'http://vblcb.wisseq.eu/VBLCB_WebService/data/RelatiesByOrgGuid?orgguid=';
     const url_leden = link_leden + bvbl;
@@ -35,3 +35,4 @@ async function update_leden() {
 }
 
 update_leden();
+
