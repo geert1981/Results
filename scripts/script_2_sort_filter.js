@@ -76,7 +76,7 @@ function show_previous_week() {
 }
 
 // FILTER - FUNCTION SHOW_CURRENT_WEEK
-function show_current_week() {
+export function show_current_week() {
     // console.log("Current week fired ...")
     get_current_week();
 }
@@ -209,4 +209,5 @@ window.onload = function() {
     get_current_week();
 
 };
+
 
