@@ -1,0 +1,281 @@
+/* CLUB BUTTONS */ 
+.grid_clubs_buttons {
+    background-color: #fff;  
+    padding-left: 10px;
+    border-bottom: 1px solid #000;
+}
+
+/* CLUB LOGO's */
+.regel_logo_naam {
+    height: 40px;
+    display: flex;
+    line-height: 40px;
+    height: auto;
+}
+.team_logo {
+    width: auto;
+    float: left;
+}
+#team_logo img {
+    background-color: #fff;
+    height: 40px;
+}
+@media (max-width: 768px) {
+    .regel_logo_naam {
+        display: block;
+    }
+    .team_logo {
+        float: none;
+    }
+}
+
+/* CLUBNAAM */
+#clubnaam {
+    font-size: 58px;
+    padding-left: 10px;
+}
+
+/* STAMNR & SITE */
+#stamnummer_site {
+    padding-top: 5px;
+}
+#stamnummer_site a {
+    color: #fff;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+#stamnummer_site a:hover {
+    text-decoration: underline;
+}
+
+/* TABLES */
+table {
+    clear: left;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+table th {
+    background-color: #f2f2f2;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+table td, table th {
+    padding: 5px;
+    text-align: center;
+}
+table td a {
+    color: #000;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+table td a:hover {
+    text-decoration: underline;
+}
+
+/* TABLE LEDEN */
+.table_leden_container {
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: thin; /* FIREFOX */
+    scrollbar-color: transparent transparent; /* FIREFOX */
+}
+/* #table_leden th {
+
+} */
+/* WEBKIT (SAFARI, CHROME) SCROLLBAR STYLING */
+.table_leden_container::-webkit-scrollbar {
+    width: 12px;
+}
+.table_leden_container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
+/* PREV_REFRESH_NEXT KALENDER REEKS */
+.buttons_prev_next {
+    float: left;
+    width: 150px;
+}
+.buttons_prev_next .previous_button, 
+.buttons_prev_next .refresh_button, 
+.buttons_prev_next .next_button {
+    color: #000;
+}
+/* CLUB BUTTONS */
+.grid_clubs_buttons .club_link {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    padding: 10px 10px;
+    color: #000;
+}
+.grid_clubs_buttons .club_link:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* MENU BUTTONS */
+.grid_menu_buttons .knop_klassement,
+.grid_menu_buttons .knop_klassement_beker,
+.grid_menu_buttons .knop_kalender,
+.grid_menu_buttons .knop_reeks,
+.grid_menu_buttons .knop_club,
+.grid_menu_buttons .knop_bestuur,
+.grid_menu_buttons .knop_sporthal,
+.grid_menu_buttons .knop_leden {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    padding: 10px 10px;
+    color: #000;
+}
+
+.grid_menu_buttons .knop_klassement:hover,
+.grid_menu_buttons .knop_kalender:hover,
+.grid_menu_buttons .knop_reeks:hover,
+.grid_menu_buttons .knop_club:hover,
+.grid_menu_buttons .knop_bestuur:hover,
+.grid_menu_buttons .knop_sporthal:hover,
+.grid_menu_buttons .knop_leden:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+
+/* TEAM BUTTONS */
+#team_buttons button {
+    text-align: center;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+#team_buttons button:hover {
+    background-color: #555;
+    color: #fff;
+}
+#team_buttons_content {
+    flex-grow: 1;
+    overflow-y: auto; /* SCROLL FUNCTIE */ 
+    overflow-x: hidden;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Verberg de scrollbar in de meeste moderne webbrowsers */
+#team_buttons_content::-webkit-scrollbar {
+    display: none;
+}
+
+#team_buttons_content button {
+    padding: 10px 35px;
+    width: 100%;
+    color: #000;
+}
+.button_scroll_top, .button_scroll_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 10px;
+    user-select: none;
+    color: #000;
+}
+/* TEAM BUTTONS MENU */
+@media (max-width: 768px) {
+    .grid_container {
+        padding: 0px;
+    }
+    .grid_club_details, .grid_team_buttons_menu, .grid_menu_buttons, .grid_reeks, .grid_kalender_team, .grid_kalender_reeks, .grid_kalender_club, .grid_leden, .grid_bestuur, .grid_sporthal, .grid_footer {
+        border-radius: 0%;
+        margin: 0px;
+        padding: 1px;
+        margin-bottom: 5px;;
+    }
+
+    .grid_team_buttons_menu button {
+        border: none;
+        background-color: #fff; 
+        cursor: pointer;
+        transition-duration: 0.4s;
+        padding: 10px 10px;
+    }
+    .grid_team_buttons_menu button:hover {
+        background-color: #555;
+        color: #fff;
+    }
+    .socialbar {
+        display: none;
+    }
+    table td, table th {
+        padding: 0px;
+    }
+
+    #hide_small {
+        display: none;
+    }
+}
+
+/* BESTUUR */
+.voorzitter_bestuur, .secretaris_bestuur, .penningmeester_bestuur, .ondervoorzitter_bestuur {
+    float: left;
+    padding: 10px 10px;
+}
+
+/* IFRAME */
+.google_maps {
+    width: 100%;
+    max-width: 500px;
+    height: 320px;
+    padding: 10px 10px;
+}
+
+/* SPORTHAL BUTTONS */
+#sporthallen_buttons button {
+    text-align: center;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    padding: 10px 10px;
+}
+#sporthallen_buttons button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* ICAL LOGO */
+.kalender_header, .klassement_header {
+    display: flex;
+}
+.title_kalender_reeks {
+    display: flex;
+    float: left;
+}
+
+.kalender_header button, .klassement_header button {
+    border: none;
+    background-color: #fff;
+}
+
+.kalender_header img, .klassement_header img {
+    max-height: 25px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.kalender_header img:hover, .klassement_header img:hover {
+    border: 1px solid #000;
+}
+.kalender_header img:active, .klassement_header img:active {
+    border: none;
+}
+.copyright {
+    color: #f2f2f2;
+}
